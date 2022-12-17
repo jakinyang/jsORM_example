@@ -30,3 +30,5 @@ sequelize.authenticate()
     console.error("Sequelize unable to connect to cheeseparty database: ", error);
     sequelize.close();
   });
+
+  module.exports = { sequelize };
