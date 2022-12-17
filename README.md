@@ -12,11 +12,12 @@ If you don't have NodeJS installed, I recommend going to their website and follo
       * Follow the instructions on one of the options for your computer's operating system
   2. Initialise the database cluster and start the database
       * This will depend on what system you are on and what install method you used
-      *  If you get lost at this poin, here are some relatively recent (as of 2022) video tutorials for some operating systems to light your way:
+      *  If you get lost at this point, here are some relatively recent (as of 2022) video tutorials for some operating systems to light your way:
           * [Mac](https://www.youtube.com/watch?v=wTqosS71Dc4&ab_channel=Prisma)
           * [Linux](https://www.youtube.com/watch?v=4CsTtMj6214&ab_channel=computeriseasy)
           * [Windows](https://www.youtube.com/watch?v=0n41UTkOBb0&ab_channel=GeekyScript)
-  3. Go to the root of this directory and run 'psql'
+## Setting up the database
+  1. Go to the root of this directory and run 'psql'
       * Psql is an interactive terminal for PostgreSQL: a way for you to interact with the PostgreSQL database from the commandline
       * After running this command, you should see some kind of confirmation that psql is running (usually a version number and a prompt for the "help" command)
 
@@ -24,7 +25,7 @@ If you don't have NodeJS installed, I recommend going to their website and follo
         > psql
         ```
 
-  4. Create the user and database
+  2. Create the user and database
       * Run these commands to create a user that matches our node-postgres configuration
         ```sh
          CREATE DATABASE cheeseparty;
@@ -37,12 +38,12 @@ If you don't have NodeJS installed, I recommend going to their website and follo
             ```sh
             \q
             ```
-  5. Connect to the cheeseparty database as the new user
+  3. Connect to the cheeseparty database as the new user
       * This command may or may not prompt you for the password 'cheeseforever'
         ```sh
         > psql -U cheesepartyhost cheeseparty
         ```
-  6. Run the schema and seedfiles to get your mock tables and data for your cheese party
+  4. Run the schema and seedfiles to get your mock tables and data for your cheese party
       * The schemas and seeds are numbered in order they should be run because some of the later seeds depend on other data as their foreign keys
       * Run these commands in order in psql while connected to the cheeseparty database
         ```sh
@@ -57,4 +58,14 @@ If you don't have NodeJS installed, I recommend going to their website and follo
         ...
         \i db/seeds/04_cheese_categories.sql
         ```
-      * If you see errors related to 
+          * If you see errors related to the tables but the table is still created, don't worry, it's the DROP TABLE IF EXISTS command that resets the tabale when you run the schema commands
+## Test Run
+Try going to the root of this repo and running this command in your CLI
+  ```sh
+  node db/queries/exampleQuery.js
+  ```
+  
+If it prints something like this to the console, it worked!
+  ```sh
+  { id: 3, name: 'Gouda', origin: 'Netherlands' }
+  ```
