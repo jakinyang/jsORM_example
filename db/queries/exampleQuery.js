@@ -12,4 +12,5 @@ poolDataBase.query(`
   })
   .catch(error => {
     console.log(error.message);
+    // What did you do?!
   });
