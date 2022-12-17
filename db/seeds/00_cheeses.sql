@@ -1,0 +1,10 @@
+INSERT INTO cheeses (name, origin) VALUES ('Brie', 'France');
+INSERT INTO cheeses (name, origin) VALUES ('Gorgonzola', 'Italy');
+INSERT INTO cheeses (name, origin) VALUES ('Gouda', 'Netherlands');
+INSERT INTO cheeses (name, origin) VALUES ('Brunost', 'Finland');
+INSERT INTO cheeses (name, origin) VALUES ('Bergkase', 'Germany');
+INSERT INTO cheeses (name, origin) VALUES ('Quark', 'Hungary');
+INSERT INTO cheeses (name, origin) VALUES ('Wensleydale', 'England');
+INSERT INTO cheeses (name, origin) VALUES ('Stichelton', 'England');
+INSERT INTO cheeses (name, origin) VALUES ('Reblochon', 'France');
+INSERT INTO cheeses (name, origin) VALUES ('Cendrillon', 'Canada');
