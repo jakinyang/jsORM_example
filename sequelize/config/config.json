@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "cheesepartyhost",
+    "password": "cheeseforever",
+    "database": "cheeseparty",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": "5432"
+  },
+  "test": {
+    "username": "cheesepartyhost",
+    "password": "cheeseforever",
+    "database": "cheeseparty",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": "5432"
+  },
+  "production": {
+    "username": "cheesepartyhost",
+    "password": "cheeseforever",
+    "database": "cheeseparty",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": "5432"
+  }
+}
